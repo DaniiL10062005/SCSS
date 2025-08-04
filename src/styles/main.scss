@@ -1,12 +1,29 @@
 :root {
-    --main-color: ;
-    --container-color: ;
-    --border-color: ;
+  --main-color: ;
+  --container-color: ;
+  --border-color: ;
+  --header-color: #32a852;
+  --footer-color: #7f8280;
+  --normal-font-size: 18px;
+  --title-font-size: 36px;
+  --header-font-size: 42px;
+  --shadow: #414141;
+}
+
+@function inner-padding($val) {
+  @return #{$val * 2}rem;
 }
 
 body {
   font-family: 'Nata Sans', sans-serif;
+  font-size: var(--normal-font-size);
   min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

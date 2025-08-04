@@ -1,5 +1,12 @@
+import { Content, Header, Footer } from './components'
+import '@/styles/main.scss'
+
 export const Main = () => {
   return (
-    <div>Main</div>
+    <div className="main">
+      <Header />
+      <Content />
+      <Footer />
+    </div>
   )
 }
