@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
 
   &__logo {
     border-radius: 100%;
@@ -28,17 +29,26 @@
       }
     }
 
+    @media (max-width: 768px) {
+      max-height: 75px;
+      width: auto;
+    }
+
     &:hover {
       box-shadow: 0px 5px 15px 0 var(--shadow);
     }
   }
 
   &__title {
-    font-size: var(--header-font-size);
+    font-size: var(--header-font-size-lg);
     color: white;
     font-weight: 200;
     margin: 0;
     transition: all 1s ease;
+
+    @media (max-width: 768px) {
+      font-size: var(--header-font-size-sm);
+    }
 
     &:hover {
       transform: translateY(-5px);

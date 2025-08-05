@@ -6,8 +6,11 @@
   --footer-color: #7f8280;
   --normal-font-size: 18px;
   --title-font-size: 36px;
-  --header-font-size: 42px;
+  --header-font-size-lg: 42px;
+  --header-font-size-sm: 38px;
+  --block-font-size: 50px;
   --shadow: #414141;
+  --border: 1rem;
 }
 
 @function inner-padding($val) {

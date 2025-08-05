@@ -1,5 +1,85 @@
-@import '../main.scss';
+@use '../main.scss' as *;
 
 .content {
   flex: 1;
+  padding-top: 180px;
+  padding-bottom: 2rem;
+  padding-inline: 3rem;
+
+  @media (max-width: 768px) {
+    padding-inline: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      grid-row: auto;
+    }
+  }
+
+  &__block {
+    border-radius: var(--border);
+    padding: 2rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      padding-inline: 1rem;
+    }
+
+    &--react {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      background: linear-gradient(to right, rgba(1, 113, 161, 0.6), rgba(0, 0, 115, 0.6));
+
+      @media (max-width: 768px) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    &--vue {
+      background: linear-gradient(to right, rgba(16, 152, 1, 0.6), rgba(1, 128, 64, 0.6));
+    }
+    &--angular {
+      background: linear-gradient(to right, rgba(117, 0, 0, 0.6), rgba(205, 72, 0, 0.6));
+    }
+
+    &--js {
+      grid-column: 2;
+      grid-row: 3 / span 2;
+      background: linear-gradient(to right, rgba(185, 146, 1, 0.6), rgba(210, 207, 0, 0.6));
+
+      @media (max-width: 768px) {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    &--tailwind {
+      background: linear-gradient(to right, rgba(0, 196, 193, 0.6), rgba(1, 94, 128, 0.6));
+    }
+    &--ts {
+      background: linear-gradient(to right, rgba(2, 0, 117, 0.6), rgba(0, 21, 205, 0.6));
+    }
+  }
+
+  &__header {
+    font-size: var(--block-font-size);
+    position: absolute;
+    margin-block: 1rem;
+    bottom: 0;
+    right: 20px;
+    transition: all 1s ease;
+  }
+
+  &__paragraph {
+    opacity: 0;
+    transition: all 0.5s ease-in;
+  }
 }
