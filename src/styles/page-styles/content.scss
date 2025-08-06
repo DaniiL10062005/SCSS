@@ -2,12 +2,12 @@
 
 .content {
   flex: 1;
-  padding-top: 180px;
-  padding-bottom: 2rem;
-  padding-inline: 3rem;
+  padding-block: inner-padding(6);
+  padding-bottom: inner-padding(2);
+  padding-inline: inner-padding(1);
 
   @media (max-width: 768px) {
-    padding-inline: 1rem;
+    padding-inline: inner-padding(0.5);
   }
 
   &__grid {
@@ -25,13 +25,13 @@
 
   &__block {
     border-radius: var(--border);
-    padding: 2rem;
+    padding: inner-padding(1);
     color: white;
     position: relative;
     cursor: pointer;
 
     @media (max-width: 768px) {
-      padding-inline: 1rem;
+      padding-inline: inner-padding(1);
     }
 
     &--react {

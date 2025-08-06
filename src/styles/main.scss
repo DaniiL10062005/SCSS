@@ -1,9 +1,7 @@
 :root {
-  --main-color: ;
-  --container-color: ;
-  --border-color: ;
-  --header-color: #32a852;
-  --footer-color: #7f8280;
+  --main-color: #d5d5d5;
+  --header-color: #000000;
+  --footer-color: #000000;
   --normal-font-size: 18px;
   --title-font-size: 36px;
   --header-font-size-lg: 42px;
@@ -22,11 +20,12 @@ body {
   font-size: var(--normal-font-size);
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: inner-padding(0);
 }
 
 .main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--main-color);
 }
